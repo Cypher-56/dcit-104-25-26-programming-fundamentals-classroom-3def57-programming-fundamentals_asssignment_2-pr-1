@@ -46,3 +46,39 @@
 #include <iostream>
 using namespace std;
 
+char getGrade(int mark){
+    if (mark < 0 || mark > 100){
+        return '\0';
+    }
+    if (mark >= 80){
+        cout << 'A' << endl;
+    } 
+
+    else if (mark >= 70){
+            cout << 'B' ;
+        }
+    else if (mark >= 60){
+            cout << 'C';
+    }
+
+    else if (mark >= 50){
+            cout << 'D';
+    }
+
+    else {
+        return 'F';
+    }
+}
+
+int main(){
+    int mark;
+    cout << "Enter student mark: ";
+    cin >> mark ;
+
+    char grade = getGrade(mark);
+    if (grade == '\0' ){
+        cout << "this is not a valid mark";
+        } else {
+            cout << "this is your grade:" << grade ;
+        }
+}
